@@ -1,5 +1,8 @@
+RGB_MATRIX_EFFECT(YELLOW_COLOR)
+
+#ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
 // enable effect by calling: rgb_matrix_mode(RGB_MATRIX_CUSTOM_simple_effect);
-static bool simple_effect(effect_params_t* params) {
+static bool YELLOW_COLOR(effect_params_t* params) {
     RGB_MATRIX_USE_LIMITS(led_min, led_max);
 
     for (uint8_t i = led_min; i < led_max; i++) {
@@ -7,3 +10,5 @@ static bool simple_effect(effect_params_t* params) {
     }
     return rgb_matrix_check_finished_leds(led_max);
 }
+
+#endif // RGB_MATRIX_CUSTOM_EFFECT_IMPLS
