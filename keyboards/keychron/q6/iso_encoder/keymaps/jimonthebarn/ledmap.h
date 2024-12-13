@@ -1,3 +1,6 @@
+#ifndef KEYMAP_CONTROL_H
+#define KEYMAP_CONTROL_H
+
 #ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
 
 typedef struct {
@@ -131,4 +134,6 @@ int toLedIdx(const char* key) {
     return 0;
 }
 
-#endif
+#endif //RGB_MATRIX_CUSTOM_EFFECT_IMPLS
+
+#endif //KEYMAP_CONTROL_H

@@ -3,11 +3,11 @@
 #include "../ledmap.h"
 
 // enable effect by calling: rgb_matrix_mode(RGB_MATRIX_CUSTOM_GAME_MODE);
-static bool GAME_MODE(effect_params_t* params) {
+static bool CODING_MODE(effect_params_t* params) {
     RGB_MATRIX_USE_LIMITS(led_min, led_max);
 
     // set base color
-    rgb_matrix_set_color_all(RGB_PURPLE);
+    rgb_matrix_set_color_all(RGB_SPRINGGREEN);
 
     rgb_matrix_set_color(toLedIdx("ESC"), RGB_YELLOW);
     rgb_matrix_set_color(toLedIdx("W"), RGB_YELLOW);
