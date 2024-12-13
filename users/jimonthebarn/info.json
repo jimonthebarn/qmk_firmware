@@ -1,0 +1,12 @@
+{
+    "rgb_matrix": {
+        "animations": {
+            "game_mode": true,
+            "coding_mode": true,
+            "function_mode": true
+        },
+        "default": {
+            "animation" : "game_mode"
+        }
+    }
+}
