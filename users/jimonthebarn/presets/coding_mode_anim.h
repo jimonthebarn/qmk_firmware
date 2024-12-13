@@ -2,7 +2,7 @@
 
 #include "../ledmap.h"
 
-#define RGB_CODING_BASE_COLOR        0xFF, 0x2A, 0x07
+#define RGB_CODING_BASE_COLOR        0xFF, 0xFF, 0x00
 #define RGB_CODING_ACCENT_COLOR        0x03, 0x1B, 0xFF
 
 static bool CODING_MODE(effect_params_t* params) {
