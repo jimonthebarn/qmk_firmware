@@ -29,13 +29,7 @@
             "solid_reactive_multiwide": true,
             "solid_reactive_multinexus": true,
             "splash": true,
-            "solid_splash": true,
-            "yellow_color": true
-        },
-        "default": {
-            "animation" : "solid_color",
-            "hue": 145,
-            "sat": 145
+            "solid_splash": true
         },
         "driver": "snled27351",
         "sleep": true

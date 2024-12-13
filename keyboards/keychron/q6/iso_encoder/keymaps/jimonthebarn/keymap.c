@@ -18,6 +18,8 @@
 
 // clang-format off
 
+#include "keymap_control.h"
+
 enum layers{
   MAC_BASE,
   MAC_FN,
