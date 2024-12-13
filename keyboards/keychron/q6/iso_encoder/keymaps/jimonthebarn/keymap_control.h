@@ -1,4 +1,7 @@
 #include "print.h"
+#include "keymap.h"
+
+#define KC_CAD LSHFT(KC_F10)
 
 enum MyPresets {
     GAME_MODE = 1,
@@ -45,25 +48,77 @@ void custom_preset_cycle(void) {
     }
 }
 
+void toggle_teams_mic(void) {
+    SEND_STRING(SS_LCTL(SS_LSFT("m")));
+}
+
+void initiate_idea_build(void) {
+    register_code(KC_LSFT);
+    tap_code(KC_F10);
+    unregister_code(KC_LSFT);
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    static bool ctrl_held = false;
-    static bool shift_held = false;
 
     switch (keycode) {
-        case KC_LCTL:
-        case KC_RCTL:
-            ctrl_held = record->event.pressed;
-        break;
-
-        case KC_LSFT:
-        case KC_RSFT:
-            shift_held = record->event.pressed;
-        break;
-
-        case KC_X:
-            if (record->event.pressed && ctrl_held && shift_held) {
+        case PRESETS:
+            if (record->event.pressed) {
                 custom_preset_cycle();
-                return false; // Prevent further processing of KC_X
+                return false;
+            }
+        break;
+        case M0:
+            if (record->event.pressed) {
+                toggle_teams_mic();
+                return false;
+            }
+        break;
+        case M1:
+            if (record->event.pressed) {
+                initiate_idea_build();
+                return false;
+            }
+        break;
+        case M2:
+            if (record->event.pressed) {
+                dprintf("Keycode pressed = M2\n");
+                return false;
+            }
+        break;
+        case M3:
+            if (record->event.pressed) {
+                dprintf("Keycode pressed = M3\n");
+                return false;
+            }
+        break;
+        case M4:
+            if (record->event.pressed) {
+                SEND_STRING(SS_LCTL(SS_LSFT("h")));
+                return false;
+            }
+        break;
+        case M5:
+            if (record->event.pressed) {
+                dprintf("Keycode pressed = M5\n");
+                return false;
+            }
+        break;
+        case M6:
+            if (record->event.pressed) {
+                dprintf("Keycode pressed = M6\n");
+                return false;
+            }
+        break;
+        case M7:
+            if (record->event.pressed) {
+                dprintf("Keycode pressed = M7\n");
+                return false;
+            }
+        break;
+        case M8:
+            if (record->event.pressed) {
+                dprintf("Keycode pressed = M8\n");
+                return false;
             }
         break;
     }

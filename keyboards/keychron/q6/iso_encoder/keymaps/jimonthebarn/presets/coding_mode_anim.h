@@ -10,10 +10,14 @@ static bool CODING_MODE(effect_params_t* params) {
     rgb_matrix_set_color_all(RGB_SPRINGGREEN);
 
     rgb_matrix_set_color(toLedIdx("ESC"), RGB_YELLOW);
-    rgb_matrix_set_color(toLedIdx("W"), RGB_YELLOW);
-    rgb_matrix_set_color(toLedIdx("A"), RGB_YELLOW);
-    rgb_matrix_set_color(toLedIdx("S"), RGB_YELLOW);
-    rgb_matrix_set_color(toLedIdx("D"), RGB_YELLOW);
+
+    rgb_matrix_set_color(toLedIdx("7"), RGB_YELLOW);
+    rgb_matrix_set_color(toLedIdx("8"), RGB_YELLOW);
+    rgb_matrix_set_color(toLedIdx("9"), RGB_YELLOW);
+    rgb_matrix_set_color(toLedIdx("0"), RGB_YELLOW);
+    rgb_matrix_set_color(toLedIdx("MINS"), RGB_YELLOW);
+    rgb_matrix_set_color(toLedIdx("NUBS"), RGB_YELLOW);
+    rgb_matrix_set_color(toLedIdx("+"), RGB_YELLOW);
 
     rgb_matrix_set_color(toLedIdx("CIRCLE"), RGB_RED);
     rgb_matrix_set_color(toLedIdx("TRIANGLE"), RGB_SPRINGGREEN);
