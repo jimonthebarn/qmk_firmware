@@ -11,9 +11,13 @@ static bool FUNCTION_MODE(effect_params_t* params) {
     // disable all
     rgb_matrix_set_color_all(RGB_OFF);
 
-    // enable available function keys
+    // enable LED on available function keys
     rgb_matrix_set_color(toLedIdx("ESC"), RGB_ACCENT_COLOR);
+    rgb_matrix_set_color(toLedIdx("LIGHTS"), RGB_ACCENT_COLOR);
+    rgb_matrix_set_color(toLedIdx("MUTE"), RGB_ACCENT_COLOR);
+    rgb_matrix_set_color(toLedIdx("FN"), RGB_ACCENT_COLOR);
 
+    // aöways on
     rgb_matrix_set_color(toLedIdx("CIRCLE"), RGB_RED);
     rgb_matrix_set_color(toLedIdx("TRIANGLE"), RGB_SPRINGGREEN);
     rgb_matrix_set_color(toLedIdx("SQUARE"), RGB_MAGENTA);
