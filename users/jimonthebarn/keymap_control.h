@@ -135,7 +135,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
         case M8:
             if (record->event.pressed) {
-                dprintf("Keycode pressed = M8\n");
+                dprintf("Going into hibernate.\n");
+                SEND_STRING("shutdown /h\n");
                 return false;
             }
         break;
