@@ -136,6 +136,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case M8:
             if (record->event.pressed) {
                 dprintf("Going into hibernate.\n");
+                tap_code16(G(KC_R));  // Sends Win+R
+                wait_ms(200);
                 SEND_STRING("shutdown /h\n");
                 return false;
             }
